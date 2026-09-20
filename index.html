@@ -6,7 +6,8 @@
 <title>Cafe DOS | Your Happy Place</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.css">
+<!-- Font Awesome CDN for updated social icons including WhatsApp and Email -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -39,6 +40,7 @@ a{text-decoration:none}
 .section-heading h6{color:#b7654c;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
 .section-heading h2{font-family:'Dancing Script',cursive;font-size:52px;color:#38231d;line-height:1.15;margin-top:5px}
 .section-heading:after{content:"";display:block;width:75px;height:3px;margin:16px auto 0;background:linear-gradient(90deg,#bd6d54,#edb096);border-radius:20px}
+
 .stats-strip{background:rgba(255,250,247,.72);border-top:1px solid #f0d9ce;border-bottom:1px solid #f0d9ce;padding:25px 8%;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .stats-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
 .stat-box{padding:18px;position:relative}
@@ -120,41 +122,31 @@ a{text-decoration:none}
 .stars{color:#d98d6d;font-size:18px;margin-bottom:10px}
 .review-box h4{color:#38231d;margin-bottom:10px}
 .review-box p{font-size:13px;color:#76645d;font-style:italic;line-height:1.85}
-.reservation-section{background:linear-gradient(135deg,rgba(48,28,23,.97),rgba(89,50,38,.94));color:#fff}
-.reservation-section .section-heading h6{color:#f0ad91}
-.reservation-section .section-heading h2{color:#fffaf7}
-.reservation-container{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.reservation-info h3{font-size:28px;color:#f0ad91;margin-bottom:15px}
-.reservation-info p{color:#eadbd5;margin-bottom:20px;line-height:1.9}
-.contact-detail{margin:15px 0}
-.contact-detail i{color:#f0ad91;width:30px}
-.contact-detail span,.contact-detail a{color:#eadbd5;line-height:1.9}
-.reservation-form{background:rgba(255,250,247,.92);padding:34px;border-radius:20px;box-shadow:0 20px 45px rgba(0,0,0,.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.reservation-form h3{text-align:center;color:#38231d;margin-bottom:20px}
-.form-group{margin-bottom:15px}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 15px;background:rgba(255,255,255,.9);border:1px solid #ead3c9;border-radius:9px;outline:none;font-family:Poppins,sans-serif}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#d58a6e;box-shadow:0 0 0 3px rgba(213,138,110,.12)}
-.form-group textarea{height:110px;resize:none}
-.form-button{width:100%;border:0;cursor:pointer;font-family:Poppins,sans-serif}
-.cta-banner{max-width:1100px;margin:60px auto 0;background:linear-gradient(135deg,#d98d6d,#edb096);border-radius:22px;padding:42px;box-shadow:0 15px 35px rgba(75,43,34,.14)}
-.cta-banner h3{font-family:'Dancing Script',cursive;font-size:43px;color:#38231d}
-.cta-banner p{color:#56382e;margin-bottom:15px}
-.cta-banner .main-button{background:#38231d;color:#fffaf7}
+
+/* Compact Contact Section styling with Side-by-Side Icon & Text Layout */
 .contact-section{background:linear-gradient(135deg,rgba(255,248,245,.82),rgba(255,233,223,.78))}
-.contact-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.contact-box{text-align:center;background:rgba(255,250,247,.82);border:1px solid #efd9cf;padding:30px 20px;border-radius:18px;box-shadow:0 8px 22px rgba(75,43,34,.07);transition:.35s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.contact-box:hover{transform:translateY(-7px);box-shadow:0 16px 32px rgba(75,43,34,.13);border-color:#d58a6e}
-.contact-box i{font-size:35px;color:#c4755b;margin-bottom:15px}
-.contact-box h4{color:#38231d;margin-bottom:10px}
-.contact-box p,.contact-box a{font-size:13px;color:#76645d}
+.contact-grid{max-width:880px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.contact-box{text-align:left;background:rgba(255,250,247,.82);border:1px solid #efd9cf;padding:18px 20px;border-radius:14px;box-shadow:0 6px 18px rgba(75,43,34,.06);transition:.35s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:flex-start;gap:16px}
+.contact-box:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(75,43,34,.11);border-color:#d58a6e}
+.contact-box i{font-size:26px;color:#c4755b;margin-top:2px;flex-shrink:0;width:32px;text-align:center}
+.contact-info{flex:1;width:100%}
+.contact-box h4{color:#38231d;margin-bottom:4px;font-size:16px;line-height:1.2}
+.contact-box p,.contact-box a{font-size:13px;color:#76645d;line-height:1.5;display:block}
+.whatsapp-box i{color:#25D366}
+.whatsapp-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:6px 14px;background-color:#25D366;color:#fff!important;border-radius:20px;font-weight:600;font-size:12px;transition:.3s}
+.whatsapp-btn i{font-size:14px;color:#fff;margin:0;width:auto}
+.whatsapp-btn:hover{background-color:#128C7E;transform:scale(1.03)}
+.one-line-time{white-space:nowrap;font-weight:600;color:#38231d}
+
 footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 15px;border-top:3px solid #d58a6e}
 .footer-logo{font-family:'Dancing Script',cursive;font-size:40px;color:#f0ad91}
 .social{margin:15px 0}
 .social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin:0 5px;border-radius:50%;background:#3d2119;border:1px solid rgba(240,173,145,.16);color:#fffaf7;transition:.3s}
 .social a:hover{background:#d58a6e;color:#38231d;transform:translateY(-4px)}
+
 @media(max-width:1100px){.nav{gap:13px}.nav li a{font-size:11px}}
-@media(max-width:900px){.nav{gap:10px}.nav li a{font-size:10px}.about-container,.reservation-container{grid-template-columns:1fr}.highlight-grid,.review-grid,.gallery-grid,.ambience-grid{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.hero-content{padding:70px 25px}.hero-content h1{font-size:80px}.section{padding:75px 6%}}
-@media(max-width:650px){.main-nav{padding:10px 15px;min-height:62px}.logo img{max-height:45px}.nav{display:none;position:absolute;top:62px;left:0;width:100%;background:rgba(48,28,23,.94);padding:15px 20px;flex-direction:column;gap:15px;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}.nav li a{font-size:13px}.menu-trigger{display:block}.hero{min-height:650px}.hero-content{text-align:center;padding:70px 15px}.hero-content h1{font-size:62px}.hero-content h2{font-size:17px;letter-spacing:2px}.hero-content p{font-size:14px}.section{padding:65px 5%}.section-heading h2{font-size:40px}.stats-grid,.feature-grid,.menu-grid,.highlight-grid,.food-showcase-grid,.ambience-grid,.gallery-grid,.review-grid,.contact-grid{grid-template-columns:1fr}.stat-box:not(:last-child):after{display:none}.about-image:before,.about-image:after{display:none}.about-image img{height:320px}.category-title{font-size:36px}.gallery-box{height:285px}.ambience-card{height:300px}.cta-banner{padding:30px 18px}.cta-banner h3{font-size:36px}}
+@media(max-width:900px){.nav{gap:10px}.nav li a{font-size:10px}.about-container{grid-template-columns:1fr}.highlight-grid,.review-grid,.gallery-grid,.ambience-grid{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.hero-content{padding:70px 25px}.hero-content h1{font-size:80px}.section{padding:75px 6%}}
+@media(max-width:650px){.main-nav{padding:10px 15px;min-height:62px}.logo img{max-height:45px}.nav{display:none;position:absolute;top:62px;left:0;width:100%;background:rgba(48,28,23,.94);padding:15px 20px;flex-direction:column;gap:15px;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}.nav li a{font-size:13px}.menu-trigger{display:block}.hero{min-height:650px}.hero-content{text-align:center;padding:70px 15px}.hero-content h1{font-size:62px}.hero-content h2{font-size:17px;letter-spacing:2px}.hero-content p{font-size:14px}.section{padding:65px 5%}.section-heading h2{font-size:40px}.stats-grid,.feature-grid,.menu-grid,.highlight-grid,.food-showcase-grid,.ambience-grid,.gallery-grid,.review-grid,.contact-grid{grid-template-columns:1fr}.stat-box:not(:last-child):after{display:none}.about-image:before,.about-image:after{display:none}.about-image img{height:320px}.category-title{font-size:36px}.gallery-box{height:285px}.ambience-card{height:300px}}
 </style>
 </head>
 <body>
@@ -170,7 +162,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <li><a href="#ambience">Ambience</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#reviews">Reviews</a></li>
-<li><a href="#reservation">Reservation</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 <a class="menu-trigger">☰</a>
@@ -182,10 +173,9 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <h1>Cafe DOS</h1>
 <h2>YOUR HAPPY PLACE IN AGRA</h2>
 <p>Good food, beautiful ambience and happy moments come together at Cafe DOS. A perfect place to spend quality time with friends and family.</p>
-<a href="#reservation" class="main-button">Book A Table</a>
+<a href="#contact" class="main-button">Call For Booking</a>
 </div>
 </section>
-
 <section class="section stats-strip">
 <div class="stats-grid">
 <div class="stat-box"><strong>Fresh</strong><span>Quality Ingredients</span></div>
@@ -215,20 +205,19 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 </div>
 </div>
 </div>
-
 <div class="feature-grid">
 <div class="feature-box">
-<i class="fa fa-coffee"></i>
+<i class="fa-solid fa-mug-hot"></i>
 <h4>Fresh Beverages</h4>
 <p>Enjoy refreshing coffee, shakes and other beverages.</p>
 </div>
 <div class="feature-box">
-<i class="fa fa-cutlery"></i>
+<i class="fa-solid fa-utensils"></i>
 <h4>Delicious Food</h4>
 <p>A wide variety of food options for every taste.</p>
 </div>
 <div class="feature-box">
-<i class="fa fa-heart"></i>
+<i class="fa-solid fa-heart"></i>
 <h4>Happy Experience</h4>
 <p>A comfortable place to spend quality time.</p>
 </div>
@@ -240,7 +229,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <h6>Our Menu</h6>
 <h2>Delicious Food & Refreshing Drinks</h2>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Coffee & Beverages</h3>
 <div class="menu-grid">
@@ -250,7 +238,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>Hot Chocolate</h4><p>Rich and delicious hot chocolate.</p></div><span class="menu-price">₹149.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Shakes & Mocktails</h3>
 <div class="menu-grid">
@@ -260,7 +247,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>Virgin Mojito</h4><p>Refreshing mint and lemon mocktail.</p></div><span class="menu-price">₹180.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Fast Food</h3>
 <div class="menu-grid">
@@ -270,7 +256,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>Sandwich</h4><p>Freshly prepared sandwich.</p></div><span class="menu-price">₹160.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Pizza & Pasta</h3>
 <div class="menu-grid">
@@ -280,7 +265,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>White Sauce Pasta</h4><p>Creamy pasta with white sauce.</p></div><span class="menu-price">₹250.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Starters & Chinese</h3>
 <div class="menu-grid">
@@ -292,7 +276,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>Hakka Noodles</h4><p>Chinese style noodles with vegetables.</p></div><span class="menu-price">₹200.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Main Course</h3>
 <div class="menu-grid">
@@ -304,7 +287,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="menu-card"><div><h4>Mix Vegetable</h4><p>Fresh vegetables cooked with spices.</p></div><span class="menu-price">₹300.00</span></div>
 </div>
 </div>
-
 <div class="menu-category">
 <h3 class="category-title">Desserts</h3>
 <div class="menu-grid">
@@ -321,23 +303,22 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 </div>
 <div class="highlight-grid">
 <div class="highlight-box">
-<i class="fa fa-birthday-cake"></i>
+<i class="fa-solid fa-cake-candles"></i>
 <h3>Birthday Celebrations</h3>
 <p>Celebrate birthdays and special occasions in a beautiful cafe atmosphere.</p>
 </div>
 <div class="highlight-box">
-<i class="fa fa-users"></i>
+<i class="fa-solid fa-users"></i>
 <h3>Friends & Family</h3>
 <p>A perfect place for catching up with friends and spending time with family.</p>
 </div>
 <div class="highlight-box">
-<i class="fa fa-star"></i>
+<i class="fa-solid fa-star"></i>
 <h3>Beautiful Ambience</h3>
 <p>Enjoy delicious food in a comfortable and happening environment.</p>
 </div>
 </div>
 </section>
-
 <section class="section food-showcase" id="food-showcase">
 <div class="section-heading">
 <h6>Our Favourites</h6>
@@ -423,7 +404,6 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 <div class="gallery-box"><img src="assets/images/cafe-drink.jpeg" alt="Cafe Drink"></div>
 </div>
 </section>
-
 <section class="section reviews-section" id="reviews">
 <div class="section-heading">
 <h6>Customer Reviews</h6>
@@ -453,60 +433,7 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 </div>
 </section>
 
-<section class="section reservation-section" id="reservation">
-<div class="section-heading">
-<h6>Reservation</h6>
-<h2>Book Your Table At Cafe DOS</h2>
-</div>
-<div class="reservation-container">
-<div class="reservation-info">
-<h3>Plan Your Visit</h3>
-<p>Planning a coffee date, family dinner, birthday celebration or a get-together with friends? Reserve your table at Cafe DOS and enjoy your favourite food in a comfortable atmosphere.</p>
-<div class="contact-detail">
-<i class="fa fa-map-marker"></i>
-<span>No. 5 Crown Plaza, Opp. to ITC Hotel Mughal, Fatehabad Road, Agra</span>
-</div>
-<div class="contact-detail">
-<i class="fa fa-envelope"></i>
-<a href="mailto:doscafe43@gmail.com">doscafe43@gmail.com</a>
-</div>
-</div>
-<div class="reservation-form">
-<h3>Table Reservation</h3>
-<form>
-<div class="form-group"><input type="text" placeholder="Your Name*" required></div>
-<div class="form-group"><input type="email" placeholder="Your Email Address" required></div>
-<div class="form-group"><input type="tel" placeholder="Phone Number*" required></div>
-<div class="form-group">
-<select required>
-<option value="">Number Of Guests</option>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
-</select>
-</div>
-<div class="form-group"><input type="date" required></div>
-<div class="form-group"><input type="time" required></div>
-<div class="form-group"><textarea placeholder="Message"></textarea></div>
-<button type="submit" class="main-button form-button">Make A Reservation</button>
-</form>
-</div>
-</div>
-
-<div class="cta-banner">
-<h3>Come, Sit Back & Enjoy!</h3>
-<p>Good food, refreshing drinks and beautiful moments are waiting for you at Cafe DOS.</p>
-<a href="#reservation" class="main-button">Reserve Your Table</a>
-</div>
-</section>
-
+<!-- Refined Compact Contact Section with 2 columns and proper text alignment -->
 <section class="section contact-section" id="contact">
 <div class="section-heading">
 <h6>Contact Us</h6>
@@ -514,46 +441,50 @@ footer{background:rgba(33,17,13,.96);color:#aaa;text-align:center;padding:30px 1
 </div>
 <div class="contact-grid">
 <div class="contact-box">
-<i class="fa fa-map-marker"></i>
+<i class="fa-solid fa-location-dot"></i>
+<div class="contact-info">
 <h4>Our Location</h4>
-<p>No. 5 Crown Plaza,<br>Opp. to ITC Hotel Mughal,<br>Fatehabad Road, Agra</p>
+<p>No. 5 Crown Plaza, Opp. to ITC Hotel Mughal, Fatehabad Road, Agra</p>
+</div>
 </div>
 <div class="contact-box">
-<i class="fa fa-envelope"></i>
+<i class="fa-solid fa-envelope"></i>
+<div class="contact-info">
 <h4>Email</h4>
 <a href="mailto:doscafe43@gmail.com">doscafe43@gmail.com</a>
 </div>
+</div>
+<div class="contact-box whatsapp-box">
+<i class="fa-brands fa-whatsapp"></i>
+<div class="contact-info">
+<h4>WhatsApp</h4>
+<p>+91 81712 64907</p>
+<a href="https://wa.me/918171264907?text=Hello%20Cafe%20DOS!%20I%20would%20like%20to%20know%20more%20about%20your%20menu%20and%20table%20bookings." target="_blank" class="whatsapp-btn">
+<i class="fa-brands fa-whatsapp"></i> Chat Now
+</a>
+</div>
+</div>
 <div class="contact-box">
-<i class="fa fa-clock-o"></i>
+<i class="fa-regular fa-clock"></i>
+<div class="contact-info">
 <h4>Opening Hours</h4>
-<p>Open Daily</p>
+<p class="one-line-time">11:00 AM to 11:00 PM Every Day</p>
+<p>Join us daily for delicious food, refreshing drinks and a warm cafe experience.</p>
+</div>
 </div>
 </div>
 </section>
+
 <footer>
 <div class="footer-logo">Cafe DOS</div>
 <p>Your Happy Place in Agra</p>
 <div class="social">
-<a href="https://www.facebook.com/share/1BfXDWyien/" target="_blank" rel="noopener noreferrer" aria-label="Cafe DOS Facebook"><i class="fa fa-facebook"></i></a>
-<a href="https://www.instagram.com/cafe___dos?igsi=MTZmeXN5bzB0N2Jycg==" target="_blank" rel="noopener noreferrer" aria-label="Cafe DOS Instagram"><i class="fa fa-instagram"></i></a>
-<a href="mailto:doscafe43@gmail.com" aria-label="Cafe DOS Email"><i class="fa fa-envelope"></i></a>
+<a href="https://www.facebook.com/share/1BfXDWyien/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/cafe___dos?stkn=MTZmeXN5bzB0N2Jycg==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="mailto:doscafe43@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://wa.me/918171264907?text=Hello%20Cafe%20DOS!" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 </div>
-<p>© 2026 Cafe DOS - Your Happy Place | All Rights Reserved.</p>
+<p>&copy; 2026 Cafe DOS. All Rights Reserved.</p>
 </footer>
-
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-$(".menu-trigger").click(function(){
-$(".nav").slideToggle(250);
-});
-$(".nav a").click(function(){
-if($(window).width()<=650){
-$(".nav").slideUp(200);
-}
-});
-});
-</script>
 </body>
 </html>

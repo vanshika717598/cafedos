@@ -1258,89 +1258,80 @@ reservation
   color: #fb5849;
 }
 
-#contact {
-  margin-left: 30px;
-  padding: 45px 30px;
-  background-color: #fff;
-  border-radius: 5px;
+/* 
+---------------------------------------------
+Contact Grid Styles
+--------------------------------------------- 
+*/
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates exactly 2 equal columns */
+  gap: 30px; /* Space between the grid items */
+  margin-top: 30px;
 }
 
-#contact h4 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 30px;
-  color: #2a2a2a;
-  margin-bottom: 30px;
-}
-
-.datepicker-days {
+.contact-box {
+  background-color: #f7f7f7; /* Light background to make boxes pop */
   padding: 30px;
-  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  color: #2a2a2a;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  width: 100%;
-  height: 46px;
-  border-radius: 5px;
-  outline: none;
-  padding-top: 3px;
-  padding-left: 20px;
-  padding-right: 20px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.contact-box:hover {
+  background-color: #fb5849; /* Matches the theme's primary red color */
+  color: #fff;
+}
+
+.contact-box:hover h4, 
+.contact-box:hover p, 
+.contact-box:hover a, 
+.contact-box:hover i {
+  color: #fff;
+}
+
+.contact-box i {
+  font-size: 32px;
+  color: #fb5849;
   margin-bottom: 15px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-  border-color: #fb5849;
+.contact-box h4 {
+  font-size: 20px !important;
+  margin-bottom: 15px !important;
 }
 
-.contact-form button {
-  margin-top: -10px;
-  font-size: 13px;
-  color: #fff;
-  background-color: #fb5849;
-  padding: 12px 25px;
-  width: 100%;
-  box-shadow: none;
-  border: none;
+.contact-box a {
+  color: #2a2a2a;
+}
+
+.contact-box .whatsapp-btn {
   display: inline-block;
-  border-radius: 3px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #25D366; /* WhatsApp Green */
+  color: #fff !important;
+  border-radius: 5px;
   font-weight: 600;
-  transition: all .3s;
 }
 
-.contact-form button:hover {
-  opacity: .9;
+.contact-box .whatsapp-btn:hover {
+  opacity: 0.9;
 }
 
-.contact-form textarea {
-  height: 150px;
-  resize: none;
-  padding: 20px;
+.contact-box .whatsapp-btn i {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-right: 5px;
 }
 
-.contact-form ::-webkit-input-placeholder { /* Edge */
-  color: #2a2a2a;
+/* Responsive adjustment for tablets and mobile devices */
+@media (max-width: 767px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Stacks to 1 column on smaller screens */
+  }
 }
-
-.contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #2a2a2a;
-}
-
-.contact-form ::placeholder {
-  color: #2a2a2a;
-}
-
 /*
 ---------------------------------------------
 offers
